@@ -14,13 +14,13 @@
 </p>
 
 ### Languages Used
-
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=RaedAddala&theme=nightowl&hide_border=false&include_all_commits=false&count_private=true&layout=compact)
 
 ### GitHub Stats
-
-![](https://github-readme-stats.vercel.app/api?username=RaedAddala&theme=nightowl&hide_border=false&include_all_commits=false&count_private=true)
-![](https://github-readme-streak-stats.herokuapp.com/?user=RaedAddala&theme=nightowl&hide_border=false)
+<p align="left">
+  <img align="center" width=400 src="https://github-readme-stats.vercel.app/api?username=RaedAddala&theme=nightowl&hide_border=false&include_all_commits=false&count_private=true">
+  <img align="center" width=400 src="https://github-readme-streak-stats.herokuapp.com/?user=RaedAddala&theme=nightowl&hide_border=false">
+</p>
 
 ### 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=RaedAddala&theme=radical&no-frame=false&no-bg=false&margin-w=4)
