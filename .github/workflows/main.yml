@@ -40,16 +40,31 @@ jobs:
           plugin_notable_indepth: yes
           plugin_stars: yes
           plugin_stargazers: yes
+          plugin_stargazers_charts_type: graph
           plugin_followup: yes
           plugin_topics: yes
           plugin_topics_mode: icons
           plugin_topics_limit: 15
+          config_timezone: Africa/Tunis
+          config_order: followup, notable, stargazers, stars, topics
+          config_padding: 12,24
+          config_twemoji: yes
+          optimize: yes
+
+      - name: Stack Overflow Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          user: RaedAddala
+          token: ${{ secrets.METRICS_SECRET }}
+          filename: metrics.stackoverflow.svg
+          base: ""
           plugin_stackoverflow: yes
           plugin_stackoverflow_user: 11842805
           plugin_stackoverflow_sections: reputation, badges, answers-top, questions-top
           plugin_stackoverflow_limit: 4
+          plugin_stackoverflow_lines: 6
+          plugin_stackoverflow_lines_snippet: 3
           config_timezone: Africa/Tunis
-          config_order: followup, notable, stargazers, stars, topics, stackoverflow
           config_padding: 12,24
           config_twemoji: yes
           optimize: yes
