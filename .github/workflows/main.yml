@@ -9,35 +9,49 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Core Metrics
+        uses: lowlighter/metrics@latest
         with:
           user: RaedAddala
           token: ${{ secrets.METRICS_SECRET }}
-          filename: metrics.svg
+          filename: metrics.core.svg
           base: header, activity, community, repositories, metadata
           plugin_achievements: yes
           plugin_achievements_display: compact
-          plugin_achievements_threshold: C
           plugin_languages: yes
           plugin_languages_indepth: yes
           plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 10
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
+          plugin_lines: yes
+          config_timezone: Africa/Tunis
+          config_order: base.header, base.activity, base.community, base.repositories, base.metadata, isocalendar, languages, lines, achievements
+          config_padding: 20,40
+          config_twemoji: yes
+          config_gemoji: yes
+          optimize: yes
+
+      - name: Extra Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          user: RaedAddala
+          token: ${{ secrets.METRICS_SECRET }}
+          filename: metrics.extra.svg
+          base: ""
           plugin_activity: yes
           plugin_activity_limit: 8
-          plugin_activity_days: 60
+          plugin_activity_days: 90
           plugin_activity_filter: all
           plugin_habits: yes
           plugin_habits_from: 500
-          plugin_habits_days: 60
+          plugin_habits_days: 90
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           plugin_notable: yes
           plugin_notable_indepth: yes
           plugin_stars: yes
           plugin_stargazers: yes
-          plugin_lines: yes
           plugin_followup: yes
           plugin_topics: yes
           plugin_topics_mode: icons
@@ -47,7 +61,8 @@ jobs:
           plugin_stackoverflow_sections: reputation, badges, answers-top, questions-top
           plugin_stackoverflow_limit: 4
           config_timezone: Africa/Tunis
-          config_order: base.header, base.activity, base.community, base.repositories, base.metadata, isocalendar, languages, lines, achievements, habits, activity, followup, notable, stargazers, stars, topics, stackoverflow
-          config_padding: 15,30
+          config_order: habits, activity, followup, notable, stargazers, stars, topics, stackoverflow
+          config_padding: 20,40
+          config_twemoji: yes
           config_gemoji: yes
           optimize: yes
