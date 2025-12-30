@@ -25,7 +25,7 @@ jobs:
           plugin_lines: yes
           config_timezone: Africa/Tunis
           config_order: base.header, base.activity, base.community, base.repositories, base.metadata, isocalendar, languages, lines
-          config_padding: 6,12
+          config_padding: 12,24
           config_twemoji: yes
           optimize: yes
 
@@ -36,10 +36,6 @@ jobs:
           token: ${{ secrets.METRICS_SECRET }}
           filename: metrics.extra.svg
           base: ""
-          plugin_activity: yes
-          plugin_activity_limit: 8
-          plugin_activity_days: 90
-          plugin_activity_filter: all
           plugin_notable: yes
           plugin_notable_indepth: yes
           plugin_stars: yes
@@ -53,7 +49,7 @@ jobs:
           plugin_stackoverflow_sections: reputation, badges, answers-top, questions-top
           plugin_stackoverflow_limit: 4
           config_timezone: Africa/Tunis
-          config_order: activity, followup, notable, stargazers, stars, topics, stackoverflow
-          config_padding: 6,12
+          config_order: followup, notable, stargazers, stars, topics, stackoverflow
+          config_padding: 12,24
           config_twemoji: yes
           optimize: yes
