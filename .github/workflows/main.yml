@@ -2,14 +2,16 @@ name: GitHub Metrics
 on:
   schedule: [{ cron: "0 0 * * *" }]
   workflow_dispatch:
-  push: { branches: ["master", "main"] }
+  push: { branches: ["main", "master"] }
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
-      - name: Core Metrics
+      - name: Generate Core Metrics
         uses: lowlighter/metrics@latest
         with:
           user: RaedAddala
@@ -21,50 +23,79 @@ jobs:
           plugin_languages: yes
           plugin_languages_indepth: yes
           plugin_languages_details: bytes-size, percentage
-          plugin_languages_limit: 10
+          plugin_languages_limit: 8
           plugin_lines: yes
-          config_timezone: Africa/Tunis
+          config_timezone: Europe/Paris
           config_order: base.header, base.activity, base.community, base.repositories, base.metadata, isocalendar, languages, lines
-          config_padding: 12,24
-          config_twemoji: yes
+          config_padding: 10,20
           optimize: yes
+# name: GitHub Metrics
+# on:
+#   schedule: [{ cron: "0 0 * * *" }]
+#   workflow_dispatch:
+#   push: { branches: ["master", "main"] }
+# jobs:
+#   github-metrics:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: write
+#     steps:
+#       - name: Core Metrics
+#         uses: lowlighter/metrics@latest
+#         with:
+#           user: RaedAddala
+#           token: ${{ secrets.METRICS_SECRET }}
+#           filename: metrics.core.svg
+#           base: header, activity, community, repositories, metadata
+#           plugin_isocalendar: yes
+#           plugin_isocalendar_duration: full-year
+#           plugin_languages: yes
+#           plugin_languages_indepth: yes
+#           plugin_languages_details: bytes-size, percentage
+#           plugin_languages_limit: 10
+#           plugin_lines: yes
+#           config_timezone: Africa/Tunis
+#           config_order: base.header, base.activity, base.community, base.repositories, base.metadata, isocalendar, languages, lines
+#           config_padding: 12,24
+#           config_twemoji: yes
+#           optimize: yes
 
-      - name: Extra Metrics
-        uses: lowlighter/metrics@latest
-        with:
-          user: RaedAddala
-          token: ${{ secrets.METRICS_SECRET }}
-          filename: metrics.extra.svg
-          base: ""
-          plugin_notable: yes
-          plugin_notable_indepth: yes
-          plugin_stars: yes
-          plugin_stargazers: yes
-          plugin_stargazers_charts_type: graph
-          plugin_followup: yes
-          plugin_topics: yes
-          plugin_topics_mode: icons
-          plugin_topics_limit: 15
-          config_timezone: Africa/Tunis
-          config_order: followup, notable, stargazers, stars, topics
-          config_padding: 12,24
-          config_twemoji: yes
-          optimize: yes
+#       - name: Extra Metrics
+#         uses: lowlighter/metrics@latest
+#         with:
+#           user: RaedAddala
+#           token: ${{ secrets.METRICS_SECRET }}
+#           filename: metrics.extra.svg
+#           base: ""
+#           plugin_notable: yes
+#           plugin_notable_indepth: yes
+#           plugin_stars: yes
+#           plugin_stargazers: yes
+#           plugin_stargazers_charts_type: graph
+#           plugin_followup: yes
+#           plugin_topics: yes
+#           plugin_topics_mode: icons
+#           plugin_topics_limit: 15
+#           config_timezone: Africa/Tunis
+#           config_order: followup, notable, stargazers, stars, topics
+#           config_padding: 12,24
+#           config_twemoji: yes
+#           optimize: yes
 
-      - name: Stack Overflow Metrics
-        uses: lowlighter/metrics@latest
-        with:
-          user: RaedAddala
-          token: ${{ secrets.METRICS_SECRET }}
-          filename: metrics.stackoverflow.svg
-          base: ""
-          plugin_stackoverflow: yes
-          plugin_stackoverflow_user: 11842805
-          plugin_stackoverflow_sections: reputation, badges, answers-top, questions-top
-          plugin_stackoverflow_limit: 4
-          plugin_stackoverflow_lines: 6
-          plugin_stackoverflow_lines_snippet: 3
-          config_timezone: Africa/Tunis
-          config_padding: 12,24
-          config_twemoji: yes
-          optimize: yes
+#       - name: Stack Overflow Metrics
+#         uses: lowlighter/metrics@latest
+#         with:
+#           user: RaedAddala
+#           token: ${{ secrets.METRICS_SECRET }}
+#           filename: metrics.stackoverflow.svg
+#           base: ""
+#           plugin_stackoverflow: yes
+#           plugin_stackoverflow_user: 11842805
+#           plugin_stackoverflow_sections: reputation, badges, answers-top, questions-top
+#           plugin_stackoverflow_limit: 4
+#           plugin_stackoverflow_lines: 6
+#           plugin_stackoverflow_lines_snippet: 3
+#           config_timezone: Africa/Tunis
+#           config_padding: 12,24
+#           config_twemoji: yes
+#           optimize: yes
