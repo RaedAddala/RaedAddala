@@ -48,16 +48,16 @@
 <h2 align="center">📊 GitHub Metrics</h2>
 
 <p align="center">
-  <img src="metrics.core.svg" alt="Core GitHub Metrics" width="70%"/>
+  <img src="metrics.core.svg" alt="Core GitHub Metrics" width="50%"/>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <img src="metrics.extra.svg" alt="Extra GitHub Metrics" width="60%"/>
 </p>
 
 <p align="center">
   <img src="metrics.stackoverflow.svg" alt="Stack Overflow Metrics" width="50%"/>
-</p>
+</p> -->
 
 <!--
 ```
