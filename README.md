@@ -1,7 +1,12 @@
 <img src="https://raw.githubusercontent.com/BEPb/BEPb/5c63fa170d1cbbb0b1974f05a3dbe6aca3f5b7f3/assets/Bottom_up.svg" width="100%" />
 
-<h2 align="center">👋 Hi, I'm Raed Addala</h2>
-<h3 align="center">Passionate Software Engineering Student • Self-Motivated Developer • Technology-Agnostic Engineer</h3>
+<h2 align="center">Raed Addala</h2>
+
+<blockquote align="center">
+  <p><em>"Make it work, then make it beautiful, then if you really, really have to, make it fast."</em></p>
+  <p align="center">— Joe Armstrong<br>
+  <small><em>Erlang and OTP in Action</em></small></p>
+</blockquote>
 
 <br>
 
