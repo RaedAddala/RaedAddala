@@ -28,14 +28,6 @@
     <img src="https://img.icons8.com/?size=100&id=jldAN67IAsrW&format=png&color=000000" alt="Codeforces" height="50" width="50" />
   </a>
   &nbsp;&nbsp;
-  <a href="https://x.com/AddalaRaed" target="_blank">
-    <img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=FFFFFF" alt="X/Twitter" height="50" width="50" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://www.npmjs.com/~addalaraed" target="_blank">
-    <img src="https://img.icons8.com/?size=100&id=24895&format=png&color=E8274B" alt="NPM" height="50" width="50" />
-  </a>
-  &nbsp;&nbsp;
   <a href="https://stackoverflow.com/users/11842805/raed-addala" target="_blank">
     <img src="https://img.icons8.com/?size=100&id=13955&format=png&color=F48024" alt="Stack Overflow" height="50" width="50" />
   </a>
